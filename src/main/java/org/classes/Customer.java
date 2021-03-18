@@ -8,14 +8,15 @@ public class Customer implements ICustomer {
     String name;
     ArrayList<Double> transactions;
 
+    public Customer(String name) {
+        this.name = name;
+        this.transactions = new ArrayList<Double>();
+    }
 
-
-    @Override
     public String getName() {
         return name;
     }
 
-    @Override
     public ArrayList<Double> getTransactions() {
         return transactions;
     }

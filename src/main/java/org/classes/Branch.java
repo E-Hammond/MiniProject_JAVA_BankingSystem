@@ -8,13 +8,15 @@ public class Branch implements IBranch {
     String name;
     ArrayList<Customer> customers;
 
+    public Branch(String name) {
+        this.name = name;
+        this.customers = new ArrayList<Customer>();
+    }
 
-    @Override
     public String getName() {
         return name;
     }
 
-    @Override
     public ArrayList<Customer> getCustomers() {
         return customers;
     }
@@ -45,6 +47,15 @@ public class Branch implements IBranch {
 
     @Override
     public boolean addCustomerTransaction(String name, double transaction) {
-        return false;
+        Customer transcation1 = null;
+        for (Double transact : transcation1.transactions){
+            if (transcation1.transactions.equals(transaction)){
+                System.out.println("Customer Transaction has been earlier");
+                return false;
+            }
+        }
+        transcation1.transactions.add(transaction);
+        System.out.println("Customer's transaction was added successfully");
+        return true;
     }
 }
