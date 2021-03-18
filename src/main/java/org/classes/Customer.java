@@ -7,6 +7,9 @@ import java.util.ArrayList;
 public class Customer implements ICustomer {
     String name;
     ArrayList<Double> transactions;
+
+
+
     @Override
     public String getName() {
         return name;
